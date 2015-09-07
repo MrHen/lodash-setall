@@ -1,0 +1,26 @@
+{
+  "name": "lodash-setall",
+  "version": "1.0.0",
+  "description": "Lodash helper to call set/get repeatedly",
+  "keywords": "lodash, util",
+  "author": "Adam Babcock <github@mrhen.com> (https://github.com/MrHen)",
+  "contributors": [
+    "Adam Babcock <github@mrhen.com> (https://github.com/MrHen)"
+  ],
+  "repository": "MrHen/lodash-setall",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "dependencies": {
+    "lodash.foreach": "^3.0.0",
+    "lodash.get": "^3.0.0",
+    "lodash.set": "^3.0.0"
+  },
+  "devDependencies": {
+    "data-driven": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-spawn-mocha": "^2.2.1",
+    "mocha": "^2.3.1",
+    "should": "^7.1.0"
+  }
+}
