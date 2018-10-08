@@ -2,25 +2,31 @@
   "name": "lodash-setall",
   "version": "1.0.0",
   "description": "Lodash helper to call set/get repeatedly",
-  "keywords": "lodash, util",
+  "keywords": ["lodash"],
   "author": "Adam Babcock <github@mrhen.com> (https://github.com/MrHen)",
   "contributors": [
     "Adam Babcock <github@mrhen.com> (https://github.com/MrHen)"
   ],
-  "repository": "MrHen/lodash-setall",
+  "repository": {
+    "type": "git",
+    "url": "git+https://MrHen@github.com/MrHen/lodash-setall.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrHen/lodash-setall/issues"
+  },
+  "homepage": "https://github.com/MrHen/latin-squares#readme",
+  "license": "MIT",
   "scripts": {
-    "test": "gulp test"
+    "test": "mocha *.spec.js"
   },
   "dependencies": {
-    "lodash.foreach": "^3.0.0",
-    "lodash.get": "^3.0.0",
-    "lodash.set": "^3.0.0"
+    "lodash.foreach": "^4.5.0",
+    "lodash.get": "^4.4.2",
+    "lodash.set": "^4.3.2"
   },
   "devDependencies": {
-    "data-driven": "^1.2.1",
-    "gulp": "^3.9.0",
-    "gulp-spawn-mocha": "^2.2.1",
-    "mocha": "^2.3.1",
-    "should": "^7.1.0"
+    "data-driven": "^1.4.0",
+    "mocha": "^5.2.0",
+    "should": "^13.2.3"
   }
 }
