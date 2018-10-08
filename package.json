@@ -1,6 +1,6 @@
 {
   "name": "lodash-setall",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Lodash helper to call set/get repeatedly",
   "keywords": ["lodash"],
   "author": "Adam Babcock <github@mrhen.com> (https://github.com/MrHen)",
