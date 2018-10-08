@@ -17,7 +17,7 @@ var map = {
   'c.a':'d'
 };
 
-var result = _setAll({}, map, origin);
+var result = _setAll(origin, map, {});
 // result = {
 //   'a': 'something',
 //   'b': 2,
