@@ -1,4 +1,4 @@
-# lodash-setall
+# lodash-setall [![Build Status](https://travis-ci.org/MrHen/lodash-setall.svg?branch=master)]
 
 Uses lodash get/set pathing to map values from one object into another:
 
