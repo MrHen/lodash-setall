@@ -85,11 +85,18 @@ describe('setAll', function() {
                 expected: {a:undefined}
             },
             {
+                label: 'undefined destination',
+                dest: undefined,
+                paths: {'a':'b'},
+                origin: {b:100},
+                expected: {a:100}
+            },
+            {
                 label: 'null destination',
                 dest: null,
-                paths: {'a':'b.c'},
-                origin: {c:'something'},
-                expected: null
+                paths: {'a':'b'},
+                origin: {b:100},
+                expected: {a:100}
             },
             {
                 label: 'null paths',
@@ -104,11 +111,11 @@ describe('setAll', function() {
                 paths: {'a':'b'},
                 origin: null,
                 expected: {'a': undefined}
-            }
+            },
         ],
       function() {
           it('{label}', function (context) {
-              var actual = setAll(context.dest, context.paths, context.origin);
+              var actual = setAll(context.origin, context.paths, context.dest);
               if (context.expected) {
                   actual.should.eql(context.expected);
               } else {
@@ -118,9 +125,9 @@ describe('setAll', function() {
       }
     );
 
-    it('edits destination object', function () {
+    it('mutates destination object', function () {
         var origin = {a:100};
-        var actual = setAll(origin, {a:'c'}, {c:'something'});
+        var actual = setAll({c:'something'}, {a:'c'}, origin);
         actual.should.equal(origin);
     });
 
@@ -130,7 +137,7 @@ describe('setAll', function() {
                 b: 'something'
             }
         };
-        var actual = setAll({}, {a:'a'}, origin);
+        var actual = setAll(origin, {a:'a'}, {});
         origin.a.b = 'something else';
 
         actual.should.eql({
